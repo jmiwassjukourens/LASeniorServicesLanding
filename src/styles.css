@@ -1,1 +1,351 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,700,600,400");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #000000 !important; /* Forzar el color de fondo */
+}
+/* Estado inicial: Oculto y levemente desplazado */
+
+html, body {
+  overflow-x: hidden;
+
+}
+main {
+    flex: 1;
+    text-align: center;
+    overflow-y: hidden;   
+    overflow-x: hidden;  
+}
+
+.container-header{
+    background-color: #000000;
+    text-align: center;
+    margin: -1px;
+    display: flexbox;
+    
+}
+
+.logo .logo_desktop{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.logo_img {
+    width: 200px;
+    margin-left: -25px;
+    padding: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 101;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+#menu {
+  padding-right: 15px;
+}
+
+.un-header{
+    padding: 20px;    
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 150;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+
+
+.init-title{
+  font-size: 25px;
+}
+
+@media (min-width: 768px) {
+.padding-hero-text{
+  padding-top: 10px;
+}
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  width: 100%;
+  height: auto;
+  flex-direction: row; 
+
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    display: none; 
+    flex-direction: row; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+ 
+    background: #000000 ;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: slideInRight 0.5s ease forwards;
+  }
+
+  nav.active {
+    display: flex; 
+  }
+}
+
+
+
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex; 
+}
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+    
+nav ul li {
+  margin: 10px; 
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.community_1{
+  width: 100%;
+  background: #000000;
+  padding: 2rem 0;
+  padding-right:10px;
+  padding-bottom: 5px;
+}
+
+.init_slogan {
+    color:#FFFFFF;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; 
+    padding-bottom: 15px;
+    letter-spacing:0.25px;
+}
+
+.blue_nave_effects5{
+    color:#013C6D;
+}
+
+.white_effects5, .white_effect{
+  color: #FFFFFF;
+}
+
+.title-desktop{
+  font-size: 25px;
+}
+
+.title-desktop-2{
+  font-size: 35px;
+}
+
+.text-content{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text-content-title{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.paragraph_2,.paragraph_3,.wwdb-text{
+    padding-top: 15px;
+    padding-bottom:5px ;
+    
+}
+
+.see_more_text{
+  color:#FFFFFF;
+}
+
+.image-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  flex-wrap: nowrap; 
+}
+
+.review_img {
+  width: 150px; 
+  height: auto; 
+  display: inline-block; 
+}
+
+footer {
+background: #000000;
+padding: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+bottom: 0;
+width: 100%;
+z-index: 1050;
+}
+
+.footer-container {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.footer-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+font-weight: bold;
+color: #091540;
+}
+
+.footer-icon {
+width: 24px;
+height: 24px;
+}
+
+.footer-divider {
+width: 2px;
+height: 30px;
+background: #091540;
+}
+
+@media (max-width: 768px) {
+.footer-container {
+gap: 10px;
+}
+.footer-icon {
+width: 20px;
+height: 20px;
+}
+}
+
+@media (min-width: 768px) {
+  .section-desktop {
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, background-color 0.8s ease-out;
+    min-height: 200px; 
+    background-color: #000000;
+    color: white; 
+  
+  }
+
+  .section1-desktop {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("/ourCommunity.png");
+  background-size: cover; 
+  background-position: center left 20%; 
+  background-color: rgba(9, 21, 64,0.6); 
+  background-blend-mode: overlay; 
+  
+}
+
+.section1_1-desktop {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+
+}
+
+.section1_2-desktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+}
+
+.text-content{
+  font-size: 20px;
+}
+
+.section1_1-desktop {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+
+}
+
+
+}
