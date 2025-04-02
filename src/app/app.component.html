@@ -1,108 +1,102 @@
-
-  <main>
-    <div class="container-header">
-      <header >
-            <div class="logo">
-              <a href="#logo">
-                <img id="logo" class="logo_img" src="/logo.png" alt="Logo">
-              </a>
-            </div>
-            
-          
-            <!-- Botón para abrir/cerrar menú -->
-            <div class="menu-toggle" (click)="toggleMenu()">
-              <span *ngIf="!isMenuActive">☰</span>
-              <span *ngIf="isMenuActive">✖</span>
-            </div>
-            <!-- Menú de navegación -->
-          
-            <nav  id="menu" [ngClass]="{ 'active': isMenuActive }">
-              <ul class="un-header">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#insurances">Insurances</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#photos">Photos</a></li>
-                <li><a href="#referrals">Referrals</a></li>
-              </ul>
-            </nav>
-      </header>
-    </div>
-    
-        <div #section id="team" class="section-desktop section1-desktop">
-          <div class="section1_1-desktop">
-            <section class="community_1" >
-                        <div class="container ">
-                             <h1  class="init_slogan hero-text init-title">HELLO THERE!</h1>
-                             
-                          <h1 class="white_effects5 title-desktop-2"><span class="blue_nave_effects5">Premium Care</span> &amp;<br>
-                            <span class="blue_nave_effects5">Lasting</span> Relationships<br>
-                            with Our Community.
-                            <br>
-                            
-                          </h1>
-                        <h1 class="white_effects5 title-desktop-2"><span class="blue_nave_effects5">Premium Care</span> &amp;
-                          </h1>
-                     
-    <section style="padding-top:20px ;" class="community_2">
-                  
-                        <h1  class="see_more_text">
-                            <span >See more of what our <br>patients are saying.</span>
-                        </h1>
-                        <div  class="image-container">
-                          <a href="https://maps.app.goo.gl/hmNgaZy5Vi5JeHHA9?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer">
-                            <img  class="review_img" src="/google.png" alt="Google Icon">
-                          </a>
-                          
-                          <a href="https://m.yelp.com/biz/sun-vida-medical-clinic-san-fernando-valley" target="_blank" rel="noopener noreferrer">
-                            <img  class="review_img" src="/yelp.png" alt="Yelp Icon">
-                          </a>
-                        </div>
-            
-        </section>
-
-                          
-                        <div class="text-content">
-                          <p class="paragraph_2 white_effects5 ">
-                            Our dedicated team of healthcare providers strives to<br > build lasting relationships with our patients, fostering <br> <strong>trust</strong> and <strong>understanding</strong> at every visit.
-                          </p>
-
-                        </div>
-                             <h1  class="init_slogan hero-text init-title">San fernando..</h1>
-                        </div>
-                      </section>
-                    </div>
-                   
+<main>
+  <div class="container-header">
+    <header>
+      <div class="logo">
+        <a href="#logo">
+          <img id="logo" class="logo_img" src="/logo.png" alt="Logo">
+        </a>
       </div>
- 
+
+      <!-- Botón para abrir/cerrar menú -->
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span *ngIf="!isMenuActive">☰</span>
+        <span *ngIf="isMenuActive">✖</span>
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav id="menu" [ngClass]="{ 'active': isMenuActive }">
+        <ul class="un-header">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#insurances">Insurances</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#referrals">Referrals</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div #section id="team" class="section-desktop section1-desktop">
+    <div class="section1_1-desktop">
+      <section class="community_1">
+        <div class="container">
+          <h1 class="init-title">HELLO THERE!</h1>
+  
+          <h1 class="title-desktop">
+            Are You Looking for <br><span class="cyan_effect">Trusted </span> &amp; <span class="cyan_effect">Local </span><br>
+            Senior Care?
+          </h1>
+          
+          <h1 class="title-desktop">
+            We Got You <span class="cyan_effect">Covered </span>
+          </h1>
+        </div>
+
+      
+
+          <div class="image-container">
+            <a href="https://maps.app.goo.gl/hmNgaZy5Vi5JeHHA9?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer">
+              <img class="review_img" src="/google.png" alt="Google Icon">
+            </a>
+            
+            <a href="https://m.yelp.com/biz/sun-vida-medical-clinic-san-fernando-valley" target="_blank" rel="noopener noreferrer">
+              <img class="review_img" src="/yelp.png" alt="Yelp Icon">
+            </a>
+          </div>
+      
+        
+        <div class="text-content">
+          <p class="paragraph_2 ">
+              <strong>Los Angeles Senior Services</strong> focuses<br>
+              on helping Seniors find <strong>Health Care,<br>
+              Community and Food Resources </strong><br>
+              in the Local Community that <strong>Support</strong><br>
+              their <strong>Daily-Needs.</strong> Our line is <strong>Open 24/7!</strong>
+          </p>
+        </div>
+        <br>
+
+        <h1 style="margin-bottom:80px;" class="init-title">SAN FERNANDO VALLEY // LOS ANGELES</h1>
+      </section>
+    </div>
+  </div>
+  
 </main>
-  
-  
-  <footer>
 
-  
-    <div class="footer-container">
-      <div *ngIf="!isDesktop" style="margin-left:15px;margin-right:15px;" class="footer-item" id="call-us">
-        <img src="/footer/callus.png" alt="Call Us Icon" class="footer-icon">
-        <span class="white_effect">CALL US</span>
-      </div>
+<footer>
+  <div class="footer-container">
+    <div *ngIf="!isDesktop" style="margin-left:15px; margin-right:15px;" class="footer-item" id="call-us">
+      <img src="/footer/callus.png" alt="Call Us Icon" class="footer-icon">
+      <span class="white_effect">CALL US</span>
     </div>
+  </div>
   
-  <div *ngIf="isDesktop"  class="footer-container">
-    <div style="margin-left:15px;margin-right:15px;" class="footer-item">
+  <div *ngIf="isDesktop" class="footer-container">
+    <div style="margin-left:15px; margin-right:15px;" class="footer-item">
       <span class="white_effect title-desktop">(818) 208-1077</span>
     </div>
   </div>
-        <div class="footer-divider"></div>
-        <a href="https://maps.app.goo.gl/hmNgaZy5Vi5JeHHA9?g_st=com.google.maps.preview.copy" 
-        class="footer-item" 
-        style="margin-left:15px; text-decoration: none;" 
-        target="_blank" 
-        rel="noopener noreferrer">
-       <img src="footer/location.png" alt="Directions Icon" class="footer-icon">
-       <span class="white_effect">DIRECTIONS</span>
-     </a>
-     
-        
+  
+  <div class="footer-divider"></div>
+  
+  <a href="https://maps.app.goo.gl/hmNgaZy5Vi5JeHHA9?g_st=com.google.maps.preview.copy" 
+     class="footer-item" 
+     style="margin-left:15px; text-decoration: none;" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    <img src="footer/location.png" alt="Directions Icon" class="footer-icon">
+    <span class="white_effect">DIRECTIONS</span>
+  </a>
+</footer>
 
-  </footer>
   
