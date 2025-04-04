@@ -262,17 +262,21 @@ width: 0.35vh;
 height: 5vh;
 background: #FFFFFF;
 }
-.reviews{
-    position: relative;
-
-}
 .section1-desktop {
   background-image: url("/backgroundImages/section1.png");
   background-size: cover; 
   background-position: center left 35%; 
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay; 
-  }
+}
+
+.color-black{
+  color:#000000;
+}
+
+.color-strong-grey{
+  color:#6E7072  ;
+}
 
 .container-call24hs{
   background-color: #00FFFF;
@@ -297,7 +301,11 @@ background: #FFFFFF;
       text-overflow: ellipsis;
       white-space: nowrap;
       background-color: #000000; 
-      }
+}
+
+.section2-desktop {
+  background-color: #DFE0E2;
+}
 
 @media (max-width: 768px) {
 .footer-container {
@@ -310,6 +318,7 @@ height: 20px;
 }
 
 @media (min-width: 768px) {
+  /*
   .section-desktop {
     opacity: 0; 
     transform: translateY(50px);
@@ -318,7 +327,7 @@ height: 20px;
     color: white; 
   
   }
-
+*/
   .section1-desktop {
 
   display: grid;
