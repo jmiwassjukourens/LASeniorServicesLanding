@@ -27,6 +27,8 @@ main {
     background-color: #000000;
     text-align: center;
     display: flexbox;
+    margin-top: -2vh;
+    margin-bottom: -6vh;
     
 }
 
@@ -37,9 +39,10 @@ main {
 }
 
 .logo_img {
-    width: 11rem;
-    margin-left: -1.1rem;
-    padding: 0.7rem;
+    width: 10rem;
+    margin-left: -.7rem;
+
+
 }
 
 .menu-toggle {
@@ -164,16 +167,12 @@ nav ul li a {
   }
 }
 
-.community_1{
-
-  background: #000000;
-  padding: 0.5rem;
-}
-
 .init-title {
     color:#FFFFFF;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
+    padding-top:3vh ;
+    padding-bottom: -3vh;
     letter-spacing:0.25px;
 }
 
@@ -263,6 +262,42 @@ width: 0.35vh;
 height: 5vh;
 background: #FFFFFF;
 }
+.reviews{
+    position: relative;
+
+}
+.section1-desktop {
+  background-image: url("/backgroundImages/section1.png");
+  background-size: cover; 
+  background-position: center left 35%; 
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay; 
+  }
+
+.container-call24hs{
+  background-color: #00FFFF;
+  padding: 3vh;
+}
+
+.btn-appointment{
+      color: #FFFFFF; 
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 1vh;
+      width: 35vh;
+      height: 5.5vh;
+      max-width: 45vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #000000; 
+      }
 
 @media (max-width: 768px) {
 .footer-container {
@@ -291,11 +326,7 @@ height: 20px;
   position: relative; 
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url("/ourCommunity.png");
-  background-size: cover; 
-  background-position: center left 20%; 
-  background-color: rgba(9, 21, 64,0.6); 
-  background-blend-mode: overlay; 
+  
   
 }
 
