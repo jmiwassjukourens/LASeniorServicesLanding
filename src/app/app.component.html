@@ -136,7 +136,87 @@
 
   </div>
 
-
+<!-- final Section-->
+<div #section class="section-desktop section12-desktop">
+  <!-- section12_1-desktop -->
+  <div class="section12_1-desktop">
+    <section class="contact" id="contact">
+      <div class="container">
+       
+        <div class="network-container">
+          <a href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
+            <picture id="instagram" class="network_img">
+              <source media="(max-width: 768px)" srcset="/instagramdesktop.png">
+              <img src="/instagram.png" alt="Instagram">
+            </picture>
+            
+            
+          </a>
+          <p  class="paragraph_3">&#64;sunvidamedicalclinic</p>
+        </div>
+        <div class="network-container">
+          <a style="text-decoration: none;" href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
+            <picture id="facebook" class="network_img">
+              <source media="(max-width: 768px)" srcset="/facebook.png">
+              <img src="/facebookdesktop.png" alt="Facebook">
+            </picture>
+            <p style="padding-left:15px;" class="paragraph_3">//sunvidamedicalclinic</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- section12_2-desktop -->
+  <div class="section12_2-desktop">
+    <section class="contact">
+      <div class="container">
+        <img  *ngIf="putbr" class="logo_img_final" src="/logo.png" alt="Logo">
+        <br *ngIf="putbr">
+        <br *ngIf="putbr">
+        <p style="padding: 0px;" class="paragraph_3">
+          8133 San Fernando Rd,Ste B1
+        </p>
+        <p style="padding: 0px;" class="paragraph_3">
+          <strong>Sun Valley</strong>, CA 91352
+        </p>
+        <br>
+        <br>
+        <p style="padding: 0px;" class="paragraph_3">
+          Phone: 818-208-1077 // Fax: 818-279-0816
+        </p>
+        <p style="padding: 0px;" class="paragraph_3">
+          office&#64;sunvidamedicalclinic.com
+        </p>
+        <br>
+        <img  *ngIf="!putbr" class="logo_img_final" src="/logo.png" alt="Logo">
+        <br>
+        <p style="padding: 5px 0px 0px 0px;" class="copyright">
+          &#169; Copyright 2025 - Sunvida Medical Clinic
+        </p>
+        <p style="padding: 5px 0px 0px 0px;" class="copyright">
+          Made by www.laseniorservices-agency.com
+        </p>
+      </div>
+    </section>
+  </div>
+  <!-- section12_3-desktop -->
+  <div class="section12_3-desktop">
+    <section class="contact">
+      <div class="container">
+        <nav id="menu" [ngClass]="{ 'active': isMenuActive }">
+          <ul class="un-header-footer">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#insurances">Insurances</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#referrals">Referrals</a></li>
+            <img class="nike_img_nav" src="/pipe.png" alt="Imagen">
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+</div>
 
 
   
