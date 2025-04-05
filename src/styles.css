@@ -201,10 +201,26 @@ nav ul li a {
     padding-right: 1rem;
 }
 
-.paragraph_2,.paragraph_3,.wwdb-text{
+.paragraph_2,.paragraph_3,.wwdb-text,.link_footer{
     color:#FFFFFF;
     font-size: 1.1rem;
     letter-spacing: 0.01rem;
+}
+.link-footer{
+    text-decoration: none;
+    color: inherit; 
+      padding: 15px;
+    
+}
+.list-footer{
+  padding: 1vh;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.list-item-footer{
+  padding: 1vh;
+
 }
 
 .see_more_text{
@@ -235,6 +251,7 @@ position: fixed;
 bottom: 0;
 width: 100%;
 z-index: 1050;
+margin-top:1vh;
 }
 
 .footer-container {
@@ -308,7 +325,7 @@ background: #FFFFFF;
 }
 
 .section12-desktop {
-  background-color: rgba(9, 21, 64,0.6); 
+  background-color: #6E7072;
   background-blend-mode: overlay;
   color: white; 
   padding: 20px;
