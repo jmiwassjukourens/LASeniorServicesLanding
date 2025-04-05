@@ -26,19 +26,19 @@
     </header>
   </div>
 
-  <div #section id="team" class="section-desktop section1-desktop">
+  <div #section id="team" class="section-web section-1">
     
-    <div class="section1_1-desktop">
+    <div class="section-1-1">
       <section class="reviews">
         <div class="container">
           <h1 class="init-title">HELLO THERE!</h1>
   
-          <h1 class="title-desktop">
+          <h1 class="title-main">
             Are You Looking for <br><span class="cyan_effect">Trusted </span> &amp; <span class="cyan_effect">Local </span><br>
             Senior Care in <strong>LA</strong>?
           </h1>
           
-          <h1 class="title-desktop">
+          <h1 class="title-main">
             We Got You <span class="cyan_effect">Covered </span>
           </h1>
         </div>
@@ -74,7 +74,7 @@
       </section>
     </div>
     
-    <div class="section1_2-desktop">
+    <div class="section1-2">
          <section class="call24hs">
             <div class="container-call24hs">
             
@@ -91,15 +91,15 @@
 
   <!--> Section 2<-->
 
-  <div #section id="team" class="section-desktop section2-desktop">
+  <div #section id="team" class="section-web section-2">
     
-    <div class="section2_1-desktop">
+    <div class="section-2-1">
       <section class="reviews">
         <div class="container">
           <br>
           <h1 class="init-title color-black">SENIOR HEALTH CARE SERVICES</h1>
   
-          <h1 class="title-desktop color-black">
+          <h1 class="title-main color-black">
             Senior Care Services <br>Covered by <span class="color-strong-grey">Medicare </span><br> and <span class="color-strong-grey">Medical</span>.
           </h1>
         </div>
@@ -121,56 +121,39 @@
         <br>
       </section>
     </div>
-    
-    <div class="section2_2-desktop">
-         <section class="call24hs">
-            <div class="container-call24hs">
-            
-                  <button class="btn-appointment">
-                    CALL 24 HS
-                  </button>
-            </div>
-          </section>
-    </div>
+
 
 
   </div>
 
 <!-- final Section-->
-<div #section class="section-desktop section12-desktop">
+<div #section class="section-web section-final">
   <!-- section12_1-desktop -->
-  <div class="section12_1-desktop">
-    <section class="contact" id="contact">
-      <div class="container">
-       
-        <div class="network-container">
-          <a href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
-            <picture id="instagram" class="network_img">
-              <source media="(max-width: 768px)" srcset="/instagramdesktop.png">
-              <img src="/instagram.png" alt="Instagram">
-            </picture>
-            
-            
-          </a>
-          <p  class="paragraph_3">&#64;laseniorservices</p>
-        </div>
-        <div class="network-container">
-          <a style="text-decoration: none;" href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
-            <picture id="facebook" class="network_img">
-              <source media="(max-width: 768px)" srcset="/facebook.png">
-              <img src="/facebookdesktop.png" alt="Facebook">
-            </picture>
-            <p style="padding-left:15px;" class="paragraph_3">//laseniorservices</p>
-          </a>
-        </div>
-      </div>
-    </section>
+  <div class="section-final-1">
+      <section class="contact" id="contact">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        
+          <div class="network-container">
+            <a href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
+              <img src="/instagram.png" alt="Instagram" class="network_img" id="instagram">
+            </a>
+            <p class="paragraph_3">&#64;laseniorservices</p>
+          </div>
 
-    
+          <div class="network-container">
+            <a href="https://www.instagram.com/sunvidamedicalclinic/" target="_blank" class="network-link">
+              <img src="/facebookdesktop.png" alt="Facebook" class="network_img" id="facebook">
+              <p class="paragraph_3" style="padding-left:15px;">//laseniorservices</p>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
   </div>
   
     <!-- section12_3-desktop -->
-  <div class="section12_3-desktop">
+  <div class="section-final-2">
     <section class="contact">
       <div class="container">
           <ul class="list-footer">
@@ -186,12 +169,9 @@
 <br>
   
   <!-- section12_2-desktop -->
-  <div class="section12_2-desktop">
+  <div class="section-final-3">
     <section class="contact">
       <div class="container">
-        <img  *ngIf="putbr" class="logo_img_final" src="/logo.png" alt="Logo">
-        <br *ngIf="putbr">
-        <br *ngIf="putbr">
 
         <p style="padding: 0px;" class="paragraph_3">
           Phone: 818-208-1077 // Fax: 818-279-0816
@@ -228,7 +208,7 @@
   
   <div *ngIf="isDesktop" class="footer-container">
     <div style="margin-left:15px; margin-right:15px;" class="footer-item">
-      <span class="white_effect title-desktop">(818) 208-1077</span>
+      <span class="white_effect title-main">(818) 208-1077</span>
     </div>
   </div>
   
