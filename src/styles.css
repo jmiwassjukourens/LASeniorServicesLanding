@@ -54,6 +54,11 @@ main {
   position: relative;
 }
 
+.services{
+  padding: 0.2vh;
+
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -194,7 +199,24 @@ nav ul li a {
 .text-content{
     padding-left: 1.2rem;
     padding-right: 1.2rem;
+   
 }
+
+.service-list {
+  list-style: none;      
+  padding: 0;
+  margin: 0;
+  text-align: left;     
+}
+
+.service-list li {
+  font-size: 1rem;         
+  margin-bottom: 0.5vh;      
+  margin-left: 6vh;
+  font-weight: 600;  
+  color:#FFFFFF;     
+}
+
 
 .text-content-title{
     padding-left: 1rem;
@@ -279,13 +301,36 @@ width: 0.35vh;
 height: 5vh;
 background: #FFFFFF;
 }
+
 .section-1{
   background-image: url("/backgroundImages/section1.png");
   background-size: cover; 
   background-position: center left 35%; 
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay; 
+  
+
 }
+
+.section-3{
+  background-image: url("/backgroundImages/section3.png");
+  background-size: cover; 
+  background-position: center left 35%; 
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay; 
+
+}
+
+.section-4{
+  background-image: url("/backgroundImages/section4.png");
+  background-size: cover; 
+  background-position: center left 35%; 
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay; 
+
+}
+
+
 
 .color-black{
   color:#000000;
@@ -299,9 +344,12 @@ background: #FFFFFF;
   background-color: #00FFFF;
   padding: 3vh;
 }
+.container-visitadhc{
+  padding: 3vh;
+}
 
-.btn-appointment{
-      color: #FFFFFF; 
+.btn-appointment, .btn-visitadhc{
+      color: #ffffffd3; 
       border: none;
       border-radius: 5px;
       font-size: 1rem;
@@ -318,7 +366,15 @@ background: #FFFFFF;
       text-overflow: ellipsis;
       white-space: nowrap;
       background-color: #000000; 
+        font-weight: 600; 
 }
+
+.btn-visitadhc {
+  background-color: #00FFFF;
+  font-size: 1.1rem;
+
+}
+
 
 .section-2 {
   background-color: #DFE0E2;
@@ -424,8 +480,67 @@ height: 20px;
   display: flex;
   flex-direction: row;
   align-items: center; /* Alinea verticalmente los elementos */
-  padding-left: 80px;
   padding: 10px;
+  padding-left: 80px;
+
+}
+
+  .section-3 {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+  
+}
+
+.section-3-1 {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+
+}
+
+.section-3-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+}
+
+  .section-4 {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+  
+}
+
+.section-4-1 {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
+
+}
+
+.section-4-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+
 }
 
 }
