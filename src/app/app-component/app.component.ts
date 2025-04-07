@@ -1,11 +1,11 @@
 import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
-import { NgStyle, isPlatformBrowser } from '@angular/common';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule, NgStyle, isPlatformBrowser } from '@angular/common';
+import { ContactFormComponent } from '../contact-form/contact-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgStyle, CommonModule],
+  imports: [NgStyle, CommonModule,ContactFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

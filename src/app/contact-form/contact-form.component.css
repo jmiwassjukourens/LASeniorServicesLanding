@@ -1,0 +1,59 @@
+/* Estilo para el mensaje de agradecimiento */
+.thank-you-message {
+    margin-top: 20px;
+    font-size: 20px; /* Aumento el tamaño de la fuente para hacerlo más visible */
+    color: #4CAF50; /* Verde claro para un tono amigable */
+    font-weight: 600; /* Aumento un poco el peso de la fuente */
+    text-align: center;
+    padding: 15px 20px; /* Espaciado interno para dar espacio alrededor del texto */
+    border: 2px solid #4CAF50; /* Borde verde para resaltar el mensaje */
+    border-radius: 8px; /* Bordes redondeados para un aspecto suave */
+    background-color: #e8f5e9; /* Fondo verde claro, suave para no sobrecargar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    max-width: 80%; /* Limitar el ancho en pantallas grandes */
+    margin: 20px auto; /* Centrado y un poco de espacio alrededor */
+    animation: fadeIn 1s ease-out; /* Animación para hacer que aparezca suavemente */
+  }
+  
+  /* Animación de aparición del mensaje */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px); /* Comienza ligeramente desplazado hacia abajo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo responsivo para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .thank-you-message {
+      font-size: 16px; /* Reducir ligeramente el tamaño de fuente */
+      padding: 12px 15px; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+  }
+  
+  
+  /* Estilos para los mensajes de error */
+.error-message {
+    background-color: #fff5f5; /* Fondo blanco suave con un toque de rojo */
+    color: #d9534f; /* Rojo para el texto del mensaje de error */
+    border: 1px solid #d9534f; /* Borde rojo para destacar el mensaje */
+    border-radius: 5px; /* Bordes redondeados para suavizar el diseño */
+    padding: 10px; /* Espaciado dentro del cuadro de error */
+    font-size: 14px; /* Tamaño de texto moderado */
+    margin-top: 5px; /* Espaciado superior para separar del campo */
+    max-width: 100%; /* Para que no se desborde en pantallas pequeñas */
+    word-wrap: break-word; /* Ajustar el texto en caso de que sea largo */
+  }
+  
+  /* Estilos para los mensajes de error cuando se encuentra en un formulario en pantallas pequeñas */
+  @media (max-width: 600px) {
+    .error-message {
+      font-size: 12px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+      padding: 8px; /* Reducir el espaciado dentro del cuadro de error */
+    }
+  }
+  

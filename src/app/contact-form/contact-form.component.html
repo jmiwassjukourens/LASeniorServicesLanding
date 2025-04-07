@@ -1,0 +1,80 @@
+<form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <!-- Nombre -->
+  <input 
+    type="text" 
+    name="name" 
+    ngModel 
+    [placeholder]="isEnglish ? 'My name is ...' : 'Mi nombre es ...'" 
+    required 
+    pattern="[A-Za-z\s]+" 
+    #name="ngModel"
+  />
+  <div *ngIf="name.invalid && name.touched">
+    <small class="error-message" *ngIf="name.errors?.['required']">
+      {{ isEnglish ? 'Name is required.' : 'El nombre es obligatorio.' }}
+    </small>
+    <small class="error-message" *ngIf="name.errors?.['pattern']">
+      {{ isEnglish ? 'Only letters are allowed.' : 'Solo se permiten letras.' }}
+    </small>
+  </div>
+  
+  <!-- Teléfono -->
+  <input 
+    type="tel" 
+    name="phone" 
+    ngModel 
+    [placeholder]="isEnglish ? 'My phone is ...' : 'Mi número es ...'" 
+    required 
+    pattern="^\+?\d{10,15}$" 
+    #phone="ngModel"
+  />
+  <div *ngIf="phone.invalid && phone.touched">
+    <small class="error-message" *ngIf="phone.errors?.['required']">
+      {{ isEnglish ? 'Phone is required.' : 'El teléfono es obligatorio.' }}
+    </small>
+    <small class="error-message" *ngIf="phone.errors?.['pattern']">
+      {{ isEnglish ? 'Enter a valid phone number (10-15 digits).' : 'Ingrese un teléfono válido (10-15 dígitos).' }}
+    </small>
+  </div>
+
+  <!-- Email (opcional, sin required) -->
+  <input
+    type="email"
+    name="email"
+    ngModel
+    [placeholder]="isEnglish ? 'My email is ...' : 'Mi correo es ...'"
+    email
+    #email="ngModel"
+  />
+  <input
+  type="text" 
+  name="question" 
+  ngModel 
+  [placeholder]="isEnglish ? 'My Question is ...' : 'Mi pregunta es ...'" 
+  pattern="^(¿)?[A-Za-z\s]+(\?)?$"
+  #question="ngModel"
+/>
+<div *ngIf="question.invalid && question.touched">
+  <small class="error-message" *ngIf="question.errors?.['pattern']">
+    {{ isEnglish ? 'Only letters are allowed.' : 'Solo se permiten letras.' }}
+  </small>
+</div>
+  <!-- Botón de envío -->
+  <button
+  type="submit"
+  class="btn-question"
+  [disabled]="contactForm.invalid"
+>
+  {{
+    type_lead === 'Referral'
+      ? 'I WANT TO REFER PATIENTS'
+      : (isEnglish ? 'CALL ME TODAY' : 'LLÁMAME HOY')
+  }}
+</button>
+
+</form>
+
+<!-- MENSAJE DE AGRADECIMIENTO -->
+<div *ngIf="formSubmitted" class="thank-you-message">
+  <p>{{ isEnglish ? 'We’ll call you in minutes!' : '¡Te llamaremos en unos minutos!' }}</p>
+</div>
