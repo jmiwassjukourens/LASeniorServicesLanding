@@ -46,19 +46,7 @@
     email
     #email="ngModel"
   />
-  <input
-  type="text" 
-  name="question" 
-  ngModel 
-  [placeholder]="isEnglish ? 'My Question is ...' : 'Mi pregunta es ...'" 
-  pattern="^(¿)?[A-Za-z\s]+(\?)?$"
-  #question="ngModel"
-/>
-<div *ngIf="question.invalid && question.touched">
-  <small class="error-message" *ngIf="question.errors?.['pattern']">
-    {{ isEnglish ? 'Only letters are allowed.' : 'Solo se permiten letras.' }}
-  </small>
-</div>
+
   <!-- Botón de envío -->
   <button
   type="submit"

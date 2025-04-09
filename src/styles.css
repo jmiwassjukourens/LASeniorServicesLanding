@@ -185,6 +185,10 @@ nav ul li a {
     color:#00FFFF;
 }
 
+.green_effect{
+    color:#99FF99;
+}
+
 .white_effects5, .white_effect{
   color: #FFFFFF;
 }
@@ -312,7 +316,7 @@ background: #FFFFFF;
 
 }
 
-.section-3{
+.section-3,.section-6{
   background-image: url("/backgroundImages/section3.png");
   background-size: cover; 
   background-position: center left 35%; 
@@ -321,7 +325,7 @@ background: #FFFFFF;
 
 }
 
-.section-4{
+.section-4,.section-7{
   background-image: url("/backgroundImages/section4.png");
   background-size: cover; 
   background-position: center left 35%; 
@@ -379,6 +383,10 @@ background: #FFFFFF;
 
 .btn-question{
     background-color: #00FFFF;
+}
+
+.btn-foodResource{
+    background-color: #99FF99;
 }
 
 .section-2 {
@@ -565,7 +573,7 @@ height: 20px;
 
 }
 
-  .section-3 {
+  .section-3,.section-6 {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -576,7 +584,7 @@ height: 20px;
   
 }
 
-.section-3-1 {
+.section-3-1,.section-6-1 {
 
   display: flex;
   flex-direction: column;
@@ -586,7 +594,7 @@ height: 20px;
 
 }
 
-.section-3-2 {
+.section-3-2,.section-6-2 {
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -594,7 +602,7 @@ height: 20px;
 
 }
 
-  .section-4 {
+  .section-4 ,.section-7{
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -605,7 +613,7 @@ height: 20px;
   
 }
 
-.section-4-1 {
+.section-4-1,.section-7 {
 
   display: flex;
   flex-direction: column;
@@ -615,7 +623,7 @@ height: 20px;
 
 }
 
-.section-4-2 {
+.section-4-2 ,.section-7{
   display: flex;
   flex-direction: column;
   justify-content: center; 
