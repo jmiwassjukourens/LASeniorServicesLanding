@@ -333,7 +333,14 @@ background: #FFFFFF;
   background-blend-mode: overlay; 
 
 }
+.section-8{
+  background-image: url("/backgroundImages/section8.png");
+  background-size: cover; 
+  background-position: center left 35%; 
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay; 
 
+}
 
 
 .color-black{
@@ -447,12 +454,33 @@ background: #FFFFFF;
   }
 
   .section-web{
-  padding-left: 3vh;
+  padding-left:3vh;
   padding-right: 3vh;
   }
 
 
+.flags_img{
+  width:50%;
+  padding-right: 3vh;
+  padding-left: 3vh;
+}
 
+.signature{
+  width:50% ;
+  margin: -5vh;
+}
+
+@media (min-width: 768px) {
+  .signature {
+    width:8% ;
+  }
+}
+
+@media (min-width: 768px) {
+  .flags_img {
+    width:25%;
+  }
+}
 
 
   .contact-form {
@@ -493,12 +521,126 @@ background: #FFFFFF;
   .btn-submit:hover {
     background-color: #012A4A;
   }
+
+.section-9 {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+
+}
+
+.container {
+  position: relative;
+  z-index: 4;
+  color: white; /* si el fondo es oscuro */
+}
+
+.wheelchair::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+
+  z-index: 3; 
+}
+
+.more_about {
+  width: 100%;
+  background: #DFE0E2;
+  padding: 2rem 0;
+  padding-right: 10px;
+}
+.section-10{
+  background: #DFE0E2;
+}
+ 
+.about_services_list {
+  display: grid;
+  flex-direction: column; /* Para que los botones estén en columna */
+  align-items: center;
+  gap: 10px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   
+}
+
+.service-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  display: inline-flex; /* Evita que se expanda */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 60px; /* Mantiene un tamaño constante */
+  flex-wrap: nowrap; /* Evita que el contenido se desborde */
+  overflow: hidden; /* Evita crecimiento inesperado */
+}
+
+.service-btn span {
+  font-size: 20px;
+}
+.toggle-icon {
+  font-weight: bold;
+}
+
+.service-content {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  animation: slide-in 0.8s ease-out;
+}
+.cyan {
+  background-color: #00FFFF;
+}
+
+.black {
+  background-color: #000;
+}
+
   /* RESPONSIVE */
   @media (min-width: 768px) {
     .contact-form {
       max-width: 500px;
     }
+    .service-btn,.service-content {
+    width: 50%; /* En desktop el botón será más pequeño */
+    max-width: 400px; /* Limita el tamaño máximo del botón */
+    margin: 0 auto; /* Centra el botón en el contenedor */
+  }
+
+  .service-item {
+    align-items: center; /* Centra los elementos en el contenedor */
+    
+  }
   }
   
   @media (min-width: 1024px) {
@@ -506,7 +648,6 @@ background: #FFFFFF;
       max-width: 600px;
     }
   }
-
 
 
 
@@ -672,5 +813,32 @@ height: 20px;
 
 
 }
+.video-fondo {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;  
+  object-fit: cover; 
+  z-index: -1; 
+
+}
+
+.service-content {
+  width: 62vh;
+  max-width: 800vh;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+}
+.service-btn {
+ width: 62vh;
+ max-width: 800vh;
+}
+
+
 
 }

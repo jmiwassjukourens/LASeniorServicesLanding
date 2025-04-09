@@ -15,6 +15,7 @@ export class ContactFormComponent implements OnInit {
   @Input() emailAddress: string = '';
   @Input() lenguage: string = ''; 
   @Input() type_lead: string = '';
+  @Input() color_btn: string = '';
 
   isDesktop: boolean = true;
   formSubmitted = false;

@@ -48,10 +48,11 @@
   />
 
   <!-- Botón de envío -->
-  <button
+<button
   type="submit"
   class="btn-question"
   [disabled]="contactForm.invalid"
+  [ngStyle]="{ 'background-color': color_btn }"
 >
   {{
     type_lead === 'Referral'
@@ -59,6 +60,7 @@
       : (isEnglish ? 'CALL ME TODAY' : 'LLÁMAME HOY')
   }}
 </button>
+
 
 </form>
 

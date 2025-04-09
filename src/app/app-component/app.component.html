@@ -359,12 +359,153 @@
                            [emailTemplate]="'template_7llv04q'"
                            [type_lead]="'Coverage'"
                            [emailAddress]="'info@sunvidamedicalclinic.com'"
-                           [lenguage]="'true'">
+                           [lenguage]="'true'"
+                           [color_btn]="'#99FF99'">
         </app-contact-form>
       </div>
     </section>
   </div>
 </div>
+
+<div #section class="section-web section-9 wheelchair">
+  <video autoplay loop muted playsinline class="video-fondo">
+    <source src="/videos/wheelchair.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+ <div class="container">
+  <div class="section-9-2">
+    <section class="spanish_section">
+      <br>
+          <h1 class="title-main">
+            <span class="cyan_effect">In Need of <br></span>Food Resources<span class="cyan_effect">?</span>
+          </h1>
+          <h1 class="init-title">LET US GET YOU <span class="cyan_effect">ANYTHING YOU NEED</span>.</h1>
+          <br>
+         <div class="text-content">
+          <p class="paragraph_2">
+              Complete the form below and we´ll<br>contact you right away.
+              <br><br>
+              We Support Seniors with a <br>
+              <strong>Wide Range of Medical Devices!</strong><br>
+              From Wheelchairs to Special Beds, <br>
+             <strong> We Have it All!</strong>
+          </p>
+
+          
+        </div>
+
+      <div class="container text-content">
+        <app-contact-form style="padding: 0 20px;"
+                           [emailTemplate]="'template_7llv04q'"
+                           [type_lead]="'Coverage'"
+                           [emailAddress]="'info@sunvidamedicalclinic.com'"
+                           [lenguage]="'true'">
+        </app-contact-form>
+      </div>
+    </section>
+  </div>
+ </div> 
+</div>
+
+
+<div #section id="team" class="section-web section-10">
+    
+    <div class="section-10-1">
+      <section class="reviews">
+        <div class="container">
+          <h1 class="init-title color-black">HELLO THERE!</h1>
+  
+          <h1 class="title-main color-black">
+              Frequently Asked <br>Questions
+          </h1>
+
+        </div>
+
+      <div class="section-10-2">
+
+        <section class="more_about">
+                <div class="container">
+                  <div class="text-content">
+                    <div class="about_services_list">
+                      <div class="service-item" *ngFor="let question of questions; let i = index">
+                        <button class="service-btn" 
+                                [ngClass]="{'cyan': i % 2 === 0, 'black': i % 2 !== 0}" 
+                                (click)="toggleService(i)">
+                          <span class="toggle-icon">{{ expandedIndex === i ? '-' : '+' }}</span>
+                          {{ question.question }}
+                        </button>
+                        <div class="service-content" *ngIf="expandedIndex === i">
+                          {{ question.answer }} <strong>{{ question.description_strong }}</strong>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                         <div class="text-content">
+          <br><br>
+          <p class="paragraph_2 color-black">
+            At <strong>Los Angeles Senior Services</strong> we <br>
+            are more than just a healthcare <br>
+            provider we are a <strong>Trusted Partner</strong><br>
+             in the 
+            <strong>Well-Being of Seniors</strong> in the <br>
+            Los Angeles Community. <br><br>
+
+            Our mission is to build <br>
+           <strong> Life-long Relationships</strong> with those <br>
+            who can Benefit from <strong>High-Quality</strong> <br>
+            <strong>Healthcare Programs</strong> covered by <br>
+            <strong>Medicare</strong> & <strong>Medi-Cal.</strong><br><br>
+
+            We believe every Senior deserves<br>
+            <strong>Compassionate, Personalized Care</strong> that<br>
+            enhances their <strong>Quality of Life</strong> while<br>
+            providing <strong>Peace of Mind</strong> to their<br>
+            Families.<br><br>
+
+            Whether it’s <strong>Skilled Nursing, Therapy,<br>
+            Personal Care,</strong> or <strong>Chronic Disease<br>
+            Management,</strong> our dedicated <br>
+            team ensures that every individual<br>
+            receives the support they need—right in<br>
+            the comfort of their home.<br><br>
+
+            By guiding seniors and their loved ones<br>
+            through <strong>accessible healthcare solutions,</strong><br>
+            we help them maintain their<br>
+            independence, dignity, and health for<br>
+            years to come. <br><br>
+
+            At <strong>LASS,</strong> we don’t just provide care—<br>
+            we create <strong>lasting connections that make a  difference.
+        </strong><br><br>
+
+            Let’s build a <strong>healthier, happier future<br>
+            together.</strong><br><br>
+          </p>
+
+        </div>
+        <img   class="signature" src="/signatureJaz.png" alt="signatureJaz">
+    
+        </section>
+
+
+
+      </div>  
+
+      </section>
+    </div>
+    
+
+
+
+  </div>
+
+
+
+
+
 
 <!-- final Section-->
 <div #section class="section-web section-final">
