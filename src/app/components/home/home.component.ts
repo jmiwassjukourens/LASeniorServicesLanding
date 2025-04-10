@@ -1,28 +1,23 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule, NgStyle, isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
+import { CommonModule, NgStyle } from '@angular/common';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 
+
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [NgStyle, CommonModule,ContactFormComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
-  title = 'LA Senior Services';
-  isMenuActive = false;
-  isDesktop: boolean = false;
-  putbr: boolean = false;
-  providers: [] = [];
+export class HomeComponent {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.isDesktop = window.innerWidth > 768;
-      this.putbr = this.isDesktop;
-    }
-  }
   
+  expandedIndex: number | null = null;
+
+  toggleService(index: number) {
+    this.expandedIndex = this.expandedIndex === index ? null : index;
+  }
     questions = [
     { question: "HOW MUCH DOES IT COST?", answer: "We provide access to Nutritious Meals and Food Assistance Programs designed for seniors and individuals in need, ensuring they receive well-balanced diets to support overall health and wellness. Our team helps connect individuals to Food Banks, Meal Delivery Services, and Community Dining Programs. We aim to reduce food insecurity and promote better health through tailored nutritional support." ,description_strong:"Call us at 818-208-1077 or email office@sunvidamedicalclinic.com to learn more about our Food Assistance Programs."},
     { question: "HOW DOES IT WORK?", answer: "Skilled Nurses and Caregivers offer Medical and Personal Care Services in the comfort of home, helping patients recover, manage chronic conditions, and maintain independence with Professional Support. Services include Medication Management, Wound Care, Physical Therapy, and Daily Living Assistance. Our goal is to enhance quality of life while ensuring patients receive the compassionate care they need.",description_strong:"For personalized home health care services, contact us today at 818-208-1077 or email office@sunvidamedicalclinic.com." },
@@ -33,27 +28,4 @@ export class AppComponent {
    
   ];
 
-  toggleMenu() {
-    this.isMenuActive = !this.isMenuActive;
-  }
-
-  expandedIndex: number | null = null;
-
-  toggleService(index: number) {
-    this.expandedIndex = this.expandedIndex === index ? null : index;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    if (isPlatformBrowser(this.platformId)) {
-      const screenWidth = window.innerWidth;
-      if (screenWidth > 768) {
-        this.isMenuActive = false;
-         this.isDesktop = true;
-      } else {
-        this.putbr = false;
-        this.isDesktop = false;
-      }
-    }
-  }
 }
