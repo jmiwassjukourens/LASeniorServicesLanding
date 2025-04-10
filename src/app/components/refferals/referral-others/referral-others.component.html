@@ -1,0 +1,105 @@
+<form class="contact-form " #referralForm="ngForm" (ngSubmit)="onSubmit(referralForm)">
+  <!-- Referral Source Name -->
+  <input
+    type="text"
+    name="referralSourceName"
+    ngModel
+    placeholder="Referral Source Name"
+    required
+    pattern="[A-Za-z\s]+"
+    #referralSourceName="ngModel"
+  />
+  <div *ngIf="referralSourceName.invalid && referralSourceName.touched">
+    <small class="error-message" *ngIf="referralSourceName.errors?.['required']">
+      Name is required.
+    </small>
+    <small class="error-message" *ngIf="referralSourceName.errors?.['pattern']">
+      Only letters allowed.
+    </small>
+  </div>
+
+  <!-- Referral Source Phone Number -->
+  <input
+    type="tel"
+    name="referralSourcePhone"
+    ngModel
+    placeholder="Referral Source Phone Number"
+    required
+    pattern="^\+?\d{10,15}$"
+    #referralSourcePhone="ngModel"
+  />
+  <div *ngIf="referralSourcePhone.invalid && referralSourcePhone.touched">
+    <small class="error-message" *ngIf="referralSourcePhone.errors?.['required']">
+      Phone number is required.
+    </small>
+    <small class="error-message" *ngIf="referralSourcePhone.errors?.['pattern']">
+      Enter a valid phone number.
+    </small>
+  </div>
+
+  <!-- Patient Full Name -->
+  <input
+    type="text"
+    name="patientName"
+    ngModel
+    placeholder="Patient Full Name"
+    required
+    pattern="[A-Za-z\s]+"
+    #patientName="ngModel"
+  />
+  <div *ngIf="patientName.invalid && patientName.touched">
+    <small class="error-message" *ngIf="patientName.errors?.['required']">
+      Patient name is required.
+    </small>
+    <small class="error-message" *ngIf="patientName.errors?.['pattern']">
+      Only letters allowed.
+    </small>
+  </div>
+
+  <!-- Patient Phone Number -->
+  <input
+    type="tel"
+    name="patientPhone"
+    ngModel
+    placeholder="Patient Phone Number"
+    required
+    pattern="^\+?\d{10,15}$"
+    #patientPhone="ngModel"
+  />
+  <div *ngIf="patientPhone.invalid && patientPhone.touched">
+    <small class="error-message" *ngIf="patientPhone.errors?.['required']">
+      Phone number is required.
+    </small>
+    <small class="error-message" *ngIf="patientPhone.errors?.['pattern']">
+      Enter a valid phone number.
+    </small>
+  </div>
+
+  <!-- Interested in -->
+  <input
+    name="interest"
+    ngModel
+    placeholder="Interested in (Explain) ..."
+    required
+    #interest="ngModel"
+  >
+  <div *ngIf="interest.invalid && interest.touched">
+    <small class="error-message">
+      This field is required.
+    </small>
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="btn-question"
+    [disabled]="referralForm.invalid"
+    [ngStyle]="{ 'background-color': color_btn }"
+  >
+    SEND REFERRAL
+  </button>
+</form>
+
+<div *ngIf="formSubmitted" class="thank-you-message">
+  <p>Thanks! We'll reach out shortly.</p>
+</div>

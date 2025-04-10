@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, NgStyle } from '@angular/common';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { BaseComponent } from '../base/base.component';
 
 
 @Component({
@@ -10,14 +11,13 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent extends BaseComponent{
 
-  
-  expandedIndex: number | null = null;
-
-  toggleService(index: number) {
-    this.expandedIndex = this.expandedIndex === index ? null : index;
+    constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    super(platformId); 
   }
+
+
     questions = [
     { question: "HOW MUCH DOES IT COST?", answer: "We provide access to Nutritious Meals and Food Assistance Programs designed for seniors and individuals in need, ensuring they receive well-balanced diets to support overall health and wellness. Our team helps connect individuals to Food Banks, Meal Delivery Services, and Community Dining Programs. We aim to reduce food insecurity and promote better health through tailored nutritional support." ,description_strong:"Call us at 818-208-1077 or email office@sunvidamedicalclinic.com to learn more about our Food Assistance Programs."},
     { question: "HOW DOES IT WORK?", answer: "Skilled Nurses and Caregivers offer Medical and Personal Care Services in the comfort of home, helping patients recover, manage chronic conditions, and maintain independence with Professional Support. Services include Medication Management, Wound Care, Physical Therapy, and Daily Living Assistance. Our goal is to enhance quality of life while ensuring patients receive the compassionate care they need.",description_strong:"For personalized home health care services, contact us today at 818-208-1077 or email office@sunvidamedicalclinic.com." },

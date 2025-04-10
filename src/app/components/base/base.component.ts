@@ -10,7 +10,7 @@ export class BaseComponent {
   providers: [] = [];
   expandedIndex: number | null = null;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) protected  platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
       this.isDesktop = window.innerWidth > 768;
       this.putbr = this.isDesktop;

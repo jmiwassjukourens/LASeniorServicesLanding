@@ -1,0 +1,53 @@
+<form class="contact-form" #selfReferralForm="ngForm" (ngSubmit)="onSubmit(selfReferralForm)">
+  <!-- Full Name -->
+  <input
+    type="text"
+    name="fullName"
+    ngModel
+    placeholder="Full Name"
+    required
+    pattern="[A-Za-z\s]+"
+    #fullName="ngModel"
+  />
+  <div *ngIf="fullName.invalid && fullName.touched">
+    <small class="error-message" *ngIf="fullName.errors?.['required']">
+      Name is required.
+    </small>
+    <small class="error-message" *ngIf="fullName.errors?.['pattern']">
+      Only letters allowed.
+    </small>
+  </div>
+
+  <!-- Phone Number -->
+  <input
+    type="tel"
+    name="phoneNumber"
+    ngModel
+    placeholder="Phone Number"
+    required
+    pattern="^\+?\d{10,15}$"
+    #phoneNumber="ngModel"
+  />
+  <div *ngIf="phoneNumber.invalid && phoneNumber.touched">
+    <small class="error-message" *ngIf="phoneNumber.errors?.['required']">
+      Phone number is required.
+    </small>
+    <small class="error-message" *ngIf="phoneNumber.errors?.['pattern']">
+      Enter a valid phone number.
+    </small>
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="btn-question"
+    [disabled]="selfReferralForm.invalid"
+    [ngStyle]="{ 'background-color': color_btn }"
+  >
+    CONTACT ME
+  </button>
+</form>
+
+<div *ngIf="formSubmitted" class="thank-you-message">
+  <p>Thanks! We'll reach out shortly.</p>
+</div>
