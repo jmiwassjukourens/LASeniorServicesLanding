@@ -1,1 +1,308 @@
-<p>location works!</p>
+<div #section class="section-web section-location-1">
+
+  <div class="section-location-1-1">
+    <section class="spanish_section">
+      <br>
+        <h1 class="init-title">WHERE TO FIND US</h1>
+
+        <h1 class="title-main">
+        We Serve All <br><span class="cyan_effect">Los Angeles </span>&amp;<br><span class="cyan_effect">Orange County </span>Areas
+        </h1>
+
+        <div class="text-content">
+            <p class="paragraph_2">
+                Available <strong>24/7</strong><br>
+                for <strong>Fast</strong> Health Care <strong>Assistance.</strong><br><br>
+
+                <strong>Call</strong> us today to find out what is <br>
+                the right <strong>Senior Health Care Service</strong> <br>
+                for <strong>You</strong> or <strong>Your Loved Ones.</strong>
+            </p>
+        </div>
+
+
+    </section>
+  </div>
+           <div class="section-location-1-2">
+         <section>
+            <div class="container-visitadhc">
+            
+                  <button class="btn-visitadhc">
+                    Call Now
+                  </button>
+            </div>
+          </section>
+    </div>
+</div>
+
+
+<div #section class="section-desktop section-location-2">
+
+    <div  class="section-location-2-1">
+      <section class="container-location-map" >
+        <app-map
+        [height]="'350px'"
+      
+        
+        ></app-map>
+      </section>
+    </div>
+  
+
+</div>
+
+<div  class="section-web section-10">
+    
+    <div class="section-10-1">
+      <section class="reviews">
+        <br>
+        <div class="container">
+          <h1 class="init-title color-black">WHERE TO FIND US</h1>
+  
+          <h1 class="title-main color-black">
+            Locations We Serve
+          </h1>
+
+        </div>
+            <div class="text-content">
+                <p class="paragraph_2 color-black">
+                    Find <strong>Senior Health Care</strong> with<br>
+                    <strong>No Out-of-Pocket Cost Near You.</strong>
+                </p>
+            </div>
+
+      <div class="section-10-2">
+
+        <section class="more_about">
+                <div class="container">
+                <h1 class="title-main color-black">
+                    Los Angeles
+                </h1>
+                  <div class="text-content">
+                    <div class="about_services_list">
+                      <div class="service-item" *ngFor="let location of locationsLA; let i = index">
+                        <button class="service-btn" 
+                                [ngClass]="{'cyan': i % 2 === 0, 'black': i % 2 !== 0}" 
+                                (click)="toggleService(i)">
+                          <span class="toggle-icon">{{ expandedIndex === i ? '-' : '+' }}</span>
+                          {{ location.title }}
+                        </button>
+                        <div class="service-content" *ngIf="expandedIndex === i">
+                          {{ location.description }} <strong>{{ location.description_strong }}</strong>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </section>
+
+         <section class="more_about">
+                <div class="container">
+                <h1 class="title-main color-black">
+                    Orange County
+                </h1>
+                  <div class="text-content">
+                    <div class="about_services_list">
+                      <div class="service-item" *ngFor="let location of locationsOC; let i = index">
+                        <button class="service-btn" 
+                                [ngClass]="{'cyan': i % 2 === 0, 'black': i % 2 !== 0}" 
+                                (click)="toggleService(i)">
+                          <span class="toggle-icon">{{ expandedIndex === i ? '-' : '+' }}</span>
+                          {{ location.title }}
+                        </button>
+                        <div class="service-content" *ngIf="expandedIndex === i">
+                          {{ location.description }} <strong>{{ location.description_strong }}</strong>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </section>
+
+      </div>  
+
+      </section>
+    </div>
+
+  </div>
+
+  <div  class="section-web section-3">
+    
+    <div class="section-3-1">
+      <section class="reviews">
+        <div class="container">
+          <br>
+          <h1 class="title-main">
+            Adult <span class="cyan_effect">Day </span> Health<br> Care<span class="cyan_effect"> Center </span>(ADHC)
+           
+          </h1>
+        </div>
+        <div class="text-content">
+          <ul class="service-list">
+            <li>Free <strong>Transportation</strong></li>
+            <li><strong>Chef-Prepared</strong> Meals</li>
+            <li><strong>Social Work</strong> Services &amp; Help</li>
+            <li><strong>Exercise</strong> &amp; <strong>Therapy</strong></li>
+            <li><strong>Socialization</strong> &amp; <strong>Recreation</strong></li>
+            <li><strong>Arts, Games</strong> &amp; <strong>Music</strong></li>
+            <li>Daily <strong>Nurse-Led Health</strong> Care</li>
+            <li><strong>Special Events</strong> &amp; <strong>Parties</strong></li>
+            <li><strong>English</strong> &amp; <strong>Spanish Classes</strong></li>
+          </ul>
+        </div>
+
+        
+     <br>
+        
+      </section>
+    </div>
+    
+    <div class="section3-2">
+         <section>
+            <div class="container-visitadhc">
+            
+                  <button class="btn-visitadhc">
+                    VISIT AN ADHC
+                  </button>
+            </div>
+          </section>
+    </div>
+
+
+  </div>
+
+
+   <div class="section-web section-4">
+    
+    <div class="section-4-1">
+      <section class="reviews">
+        <div class="container">
+          <br>
+          <h1 class="title-main">
+            Los Angeles <span class="cyan_effect">Home<br>Health Care </span>Services
+          </h1>
+        </div>
+     <div class="text-content">
+          <ul class="service-list">
+            <li>Surgery Recovery</li>
+            <li>Skilled Nursing Care</li>
+            <li>Physical Therapy</li>
+            <li>Occupational Therapy</li>
+            <li>Speech Therapy</li>
+            <li>Medication Management</li>
+            <li>Wound Care</li>
+            <li>Medical Social Services</li>
+            <li>Personal Care Assistance</li>
+            <li>Chronic Disease Management</li>
+          </ul>
+      </div>
+
+        
+     <br>
+        
+      </section>
+    </div>
+    
+    <div class="section-4-2">
+         <section>
+            <div class="container-visitadhc">
+            
+                  <button class="btn-visitadhc">
+                    I NEED HOME HEALTH CARE
+                  </button>
+            </div>
+          </section>
+    </div>
+
+
+  </div>
+<div  class="section-web section-6">
+    
+    <div class="section-6-1">
+      <section class="reviews">
+        <div class="container">
+          <br>
+          <h1 class="title-main">
+             <span class="cyan_effect">Hospice </span>&amp;<span class="cyan_effect"> Palliative </span><br> Care Services
+          </h1>
+        </div>
+          <div class="text-content">
+            <ul class="service-list">
+              <li><strong>Pain </strong>&amp;<strong> Symptom</strong> Management</li>
+              <li><strong>Emotional</strong> &amp; <strong>Psychological Support</strong></li>
+              <li><strong>24/7</strong> Medical Support</li>
+              <li><strong>Personalized Care</strong> Plans</li>
+              <li>Family<strong> Support</strong> &amp; <strong>Education</strong></li>
+              <li><strong>Spiritual Care</strong> Services</li>
+              <li><strong>Home-Based </strong>&amp;<strong> Facility Care</strong></li>
+              <li><strong>Respite Care </strong>for<strong> Families</strong></li>
+              <li><strong>Bereavement </strong>&amp;<strong> Grief Support</strong></li>
+            </ul>
+          </div>
+
+
+        
+     <br>
+        
+      </section>
+    </div>
+    
+    <div class="section-6-2">
+         <section>
+            <div class="container-visitadhc">
+            
+                  <button class="btn-visitadhc">
+                    I NEED HOSPICE CARE
+                  </button>
+            </div>
+          </section>
+    </div>
+
+
+  </div>
+
+   <div class="section-web section-7">
+    
+    <div class="section-7-1">
+      <section class="reviews">
+        <div class="container">
+          <br>
+          <h1 class="title-main">
+            Los Angeles <span class="cyan_effect">Home<br>Health Care </span>Services
+          </h1>
+        </div>
+        <div class="text-content">
+          <ul class="service-list">
+            <li>Primary <strong>Medical Care</strong></li>
+            <li><strong>Laboratory & Testing</strong></li>
+            <li><strong>Wound & Foot Care</strong></li>
+            <li><strong>Chronic Disease</strong> Management</li>
+            <li><strong>Mental Health</strong> Diagnosis & Care</li>
+            <li><strong>Women’s Health Care</strong></li>
+            <li><strong>Family Medicine</strong></li>
+            <li>Physical <strong>Exams</strong> & TB <strong>Testing</strong></li>
+          </ul>
+        </div>
+
+
+        
+     <br>
+        
+      </section>
+    </div>
+    
+    <div class="section-7-2">
+         <section>
+            <div class="container-visitadhc">
+            
+                  <button class="btn-visitadhc">
+                    GET SENIOR CARE
+                  </button>
+            </div>
+          </section>
+    </div>
+
+
+  </div>

@@ -11,7 +11,6 @@ import { BaseComponent } from '../base/base.component';
   standalone: true,
   imports: [CommonModule,RouterOutlet,RouterLink,RouterModule,NgStyle],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.Emulated // Por defecto
   
 })

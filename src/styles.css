@@ -306,7 +306,7 @@ height: 5vh;
 background: #FFFFFF;
 }
 
-.section-1{
+.section-1,.section-referral-others{
   background-image: url("/backgroundImages/section1.png");
   background-size: cover; 
   background-position: center left 35%; 
@@ -316,13 +316,16 @@ background: #FFFFFF;
 
 }
 
-.section-3,.section-6{
+.section-3,.section-6,.section-self-referral{
   background-image: url("/backgroundImages/section3.png");
   background-size: cover; 
   background-position: center left 35%; 
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay; 
 
+}
+.section-self-referral{
+  background-image: url("/backgroundImages/selfReferral.png");
 }
 
 .section-4,.section-7{
@@ -333,7 +336,7 @@ background: #FFFFFF;
   background-blend-mode: overlay; 
 
 }
-.section-8{
+.section-8,.section-location-1{
   background-image: url("/backgroundImages/section8.png");
   background-size: cover; 
   background-position: center left 35%; 
@@ -396,7 +399,7 @@ background: #FFFFFF;
     background-color: #99FF99;
 }
 
-.section-2 {
+.section-2 ,.section-location-2-2{
   background-color: #DFE0E2;
 }
 
@@ -686,19 +689,31 @@ background: #FFFFFF;
   background-color: #000;
 }
 
+.section-referral-others,.section-self-referral{
+padding-right: 5vh;
+padding-left: 5vh;
+}
+
+
+.container-location-map {
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
   /* RESPONSIVE */
   @media (min-width: 768px) {
     .contact-form {
       max-width: 500px;
     }
     .service-btn,.service-content {
-    width: 50%; /* En desktop el botón será más pequeño */
-    max-width: 400px; /* Limita el tamaño máximo del botón */
-    margin: 0 auto; /* Centra el botón en el contenedor */
+    width: 50%; 
+    max-width: 400px; 
+    margin: 0 auto; 
   }
 
   .service-item {
-    align-items: center; /* Centra los elementos en el contenedor */
+    align-items: center;
     
   }
   }
