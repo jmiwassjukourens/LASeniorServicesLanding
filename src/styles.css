@@ -225,6 +225,16 @@ color:#a2dff5;
    
 }
 
+.text-content-au{
+  padding:5vh;
+}
+
+.text-au{   
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  color: #FFFFFF;
+}
+
 .service-list {
   list-style: none;      
   padding: 0;
@@ -355,15 +365,17 @@ background: #FFFFFF;
   background-blend-mode: overlay; 
 }
 
-.video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1; 
+.section-3-au{
+  background-image: url("/backgroundImages/section8.png");
+  position: relative;
+  height: 40vh;
+  background-size: cover; 
+  background-position: top left 35%; 
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay; 
 }
+
+
 
 .section-2-1-au {
   display: flex;
@@ -376,6 +388,31 @@ background: #FFFFFF;
 }
 
 
+.section-4-au {
+  background-color: #000; 
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.review-block {
+  margin-bottom: 2rem;
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.author {
+  color: white;
+  display: block;
+  margin-top: 0.5rem;
+}
 
 
 .section-4,.section-7{
@@ -750,6 +787,13 @@ padding-left: 5vh;
   width: 100%;
   color: white;
   position: relative;
+}
+
+.comment {
+  color: #23B5D3; /* cyan */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
 }
 
   /* RESPONSIVE */
