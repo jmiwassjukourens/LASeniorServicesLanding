@@ -32,7 +32,7 @@ main {
     
 }
 
-.logo .logo_desktop{
+.logo .logo_desktop,.logo_au{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem;
@@ -41,9 +41,22 @@ main {
 .logo_img {
     width: 10rem;
     margin-left: -.7rem;
-
-
 }
+
+
+.logo_img_au {
+  width: 80%;
+  margin: 1rem auto;
+  display: block;
+  margin-top: -8vh;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: -16vh;
+}
+
 
 .menu-toggle {
   display: none;
@@ -181,9 +194,15 @@ nav ul li a {
     letter-spacing:0.25px;
 }
 
+
 .cyan_effect{
-    color:#00FFFF;
+  color:#23B5D3;
 }
+
+.cyan_effect_bright{
+color:#a2dff5;
+}
+
 
 .green_effect{
     color:#99FF99;
@@ -328,6 +347,37 @@ background: #FFFFFF;
   background-image: url("/backgroundImages/selfReferral.png");
 }
 
+.section-2-au {
+  background-image: url("/backgroundImages/section4.png");
+  background-size: cover; 
+  background-position: center left 35%; 
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay; 
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.section-2-1-au {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  padding-top: 20vh;
+}
+
+
+
+
 .section-4,.section-7{
   background-image: url("/backgroundImages/section4.png");
   background-size: cover; 
@@ -386,13 +436,13 @@ background: #FFFFFF;
 }
 
 .btn-visitadhc {
-  background-color: #00FFFF;
+  background-color: #23B5D3;
   font-size: 1.1rem;
 
 }
 
 .btn-question{
-    background-color: #00FFFF;
+    background-color: #23B5D3;
 }
 
 .btn-foodResource{
@@ -407,12 +457,13 @@ background: #FFFFFF;
   background-color: #6E7072;
   background-blend-mode: overlay;
   color: white; 
-  padding: 20px;
+
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
   text-align: center;
- 
+  padding-bottom: 12vh;
+
   
 }
 .section-final-1 {
@@ -913,7 +964,9 @@ height: 20px;
  width: 62vh;
  max-width: 800vh;
 }
-
+.section-final-3{
+  padding-bottom: 3vh;
+}
 
 
 }
