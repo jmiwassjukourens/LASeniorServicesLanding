@@ -35,4 +35,11 @@ export class BaseComponent {
       this.putbr = this.isDesktop;
     }
   }
+
+  goToLink(url: string): void {
+    if (!/^https?:\/\//i.test(url)) {
+      url = 'https://' + url;
+    }
+    window.open(url, '_blank');
+  }
 }
