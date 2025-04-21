@@ -10,11 +10,11 @@ export const routes: Routes = [
       loadComponent: () => import('../refferals/refferals.component').then(c => c.RefferalsComponent)
     }, 
     {
-      path:'location',
+      path:'locations',
       loadComponent: () => import('../location/location.component').then(c => c.LocationComponent)
     },
     {
-      path:'aboutus',
+      path:'about-us',
       loadComponent: () => import('../about-us/about-us.component').then(c => c.AboutUsComponent)
     }, 
     {

@@ -25,6 +25,7 @@ export class BaseComponent {
     this.expandedIndex = this.expandedIndex === index ? null : index;
   }
 
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     if (isPlatformBrowser(this.platformId)) {

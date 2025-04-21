@@ -28,4 +28,17 @@ export class HomeComponent extends BaseComponent{
    
   ];
 
+  callNow(): void {
+    window.location.href = "tel:8189227400";
+  }
+  
+  goToLink(url: string): void {
+    if (!/^https?:\/\//i.test(url)) {
+      url = 'https://' + url;
+    }
+    window.open(url, '_blank');
+  }
+  
+
+  
 }

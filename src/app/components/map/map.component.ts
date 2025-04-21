@@ -9,7 +9,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
   templateUrl: './map.component.html'
 })
 export class MapComponent {
-  center: google.maps.LatLngLiteral = { lat: 34.216606, lng: -118.370331 };
+  center: google.maps.LatLngLiteral = { lat: 34.052235, lng: -118.243683 };
   zoom = 15; 
   @Input() height : string ='';
   @Input() width : string ='';
