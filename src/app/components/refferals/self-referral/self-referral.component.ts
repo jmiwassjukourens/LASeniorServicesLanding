@@ -35,6 +35,7 @@ export class SelfReferralComponent extends BaseComponent {
       };
 
       this.sendEmail(formData);
+      this.trackConversion();
       this.formSubmitted = true;
       form.reset();
     }
