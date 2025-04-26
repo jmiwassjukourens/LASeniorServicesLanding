@@ -2,18 +2,18 @@
   <!-- Full Name -->
   <input
     type="text"
-    name="fullName"
+    name="name"
     ngModel
     placeholder="Full Name"
     required
     pattern="[A-Za-z\s]+"
-    #fullName="ngModel"
+    #name="ngModel"
   />
-  <div *ngIf="fullName.invalid && fullName.touched">
-    <small class="error-message" *ngIf="fullName.errors?.['required']">
+  <div *ngIf="name.invalid && name.touched">
+    <small class="error-message" *ngIf="name.errors?.['required']">
       Name is required.
     </small>
-    <small class="error-message" *ngIf="fullName.errors?.['pattern']">
+    <small class="error-message" *ngIf="name.errors?.['pattern']">
       Only letters allowed.
     </small>
   </div>
@@ -21,18 +21,18 @@
   <!-- Phone Number -->
   <input
     type="tel"
-    name="phoneNumber"
+    name="phone"
     ngModel
     placeholder="Phone Number"
     required
     pattern="^\+?\d{10,15}$"
-    #phoneNumber="ngModel"
+    #phone="ngModel"
   />
-  <div *ngIf="phoneNumber.invalid && phoneNumber.touched">
-    <small class="error-message" *ngIf="phoneNumber.errors?.['required']">
+  <div *ngIf="phone.invalid && phone.touched">
+    <small class="error-message" *ngIf="phone.errors?.['required']">
       Phone number is required.
     </small>
-    <small class="error-message" *ngIf="phoneNumber.errors?.['pattern']">
+    <small class="error-message" *ngIf="phone.errors?.['pattern']">
       Enter a valid phone number.
     </small>
   </div>

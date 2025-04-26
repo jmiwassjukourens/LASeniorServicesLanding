@@ -18,20 +18,20 @@ export class SelfReferralComponent extends BaseComponent {
 
   formSubmitted = false;
 
-  fullName: string = '';
-  phoneNumber: string = '';
+  name: string = '';
+  phone: string = '';
   color_btn: string = '#00BCD4'; 
   type_lead: string = 'type_lead_5';
 
-  private publicKey = 'vR7fA73IKsOfH1KcS';
+  private publicKey = 'gMITTFHhtxUjqlT7_';
   private serviceID = 'service_rzx26ou';
-  private emailTemplate = 'template_id_5'; // reemplazá por tu ID real
+  private emailTemplate = 'template_mb3orn7'; 
 
   onSubmit(form: any) {
     if (form.valid) {
       const formData = {
-        fullName: form.value.fullName,
-        phoneNumber: form.value.phoneNumber
+        name: form.value.name,
+        phone: form.value.phone
       };
 
       this.sendEmail(formData);

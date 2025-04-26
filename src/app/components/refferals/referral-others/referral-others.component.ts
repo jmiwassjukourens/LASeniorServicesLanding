@@ -15,15 +15,15 @@ export class ReferralOthersComponent extends BaseComponent{
 constructor(@Inject(PLATFORM_ID) platformId: Object) {
     super(platformId);
   }
-  emailTemplate: string = 'template_id_4';
+  emailTemplate: string = 'template_5som7eg';
   emailAddress: string = 'info@laseniorservices.com';
   type_lead: string = 'type_lead_4';
   color_btn: string = '';
 
   formSubmitted = false;
 
-  private publicKey = 'vR7fA73IKsOfH1KcS';
-  private serviceID = 'service_rzx26ou';
+  private publicKey = 'gMITTFHhtxUjqlT7_';
+  private serviceID = 'service_aylhoo2';
 
 
 

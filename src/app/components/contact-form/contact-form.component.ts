@@ -20,7 +20,7 @@ export class ContactFormComponent implements OnInit {
   isDesktop: boolean = true;
   formSubmitted = false;
 
-  private publicKey = 'vR7fA73IKsOfH1KcS';
+  private publicKey = 'gMITTFHhtxUjqlT7_';
   private serviceID = 'service_rzx26ou';
 
   private emailjsPublic = {
