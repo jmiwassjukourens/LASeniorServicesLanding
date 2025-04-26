@@ -1,5 +1,5 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { BaseComponent } from '../../base/base.component';
@@ -20,18 +20,18 @@ export class SelfReferralComponent extends BaseComponent {
 
   fullName: string = '';
   phoneNumber: string = '';
-  color_btn: string = '#00BCD4'; // azul como el botón de la imagen
+  color_btn: string = '#00BCD4'; 
+  type_lead: string = 'type_lead_5';
 
   private publicKey = 'vR7fA73IKsOfH1KcS';
   private serviceID = 'service_rzx26ou';
-  private emailTemplate = 'template_xxxxxx'; // reemplazá por tu ID real
+  private emailTemplate = 'template_id_5'; // reemplazá por tu ID real
 
   onSubmit(form: any) {
     if (form.valid) {
       const formData = {
         fullName: form.value.fullName,
-        phoneNumber: form.value.phoneNumber,
-        to_email: 'info@laseniorservices.com'
+        phoneNumber: form.value.phoneNumber
       };
 
       this.sendEmail(formData);
@@ -50,4 +50,21 @@ export class SelfReferralComponent extends BaseComponent {
         alert('Error sending email.');
       });
   }
+
+    private trackConversion() {
+      if (isPlatformBrowser(this.platformId) && typeof (window as any).gtag === 'function') {
+        const eventName = `form_submit_${this.type_lead || 'default'}`;
+        (window as any).gtag('event', eventName, {
+          'send_to': this.type_lead,
+          'value': 1,
+          'currency': 'USD'
+        });
+  
+        console.log(`Evento de conversión enviado: ${eventName}`);
+      } else {
+        console.warn('gtag no está definido o no estamos en navegador.');
+      }
+    }
+
+
 }

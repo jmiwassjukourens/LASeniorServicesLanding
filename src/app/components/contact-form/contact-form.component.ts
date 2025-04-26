@@ -23,23 +23,15 @@ export class ContactFormComponent implements OnInit {
   private publicKey = 'vR7fA73IKsOfH1KcS';
   private serviceID = 'service_rzx26ou';
 
-  private publicKeyPrivate = 'gMITTFHhtxUjqlT7_';
-  private serviceIDPrivate = 'service_aylhoo2';
-  private emailTemplatePrivate: string = 'template_mb3orn7';
-
   private emailjsPublic = {
     send: (serviceID: string, templateID: string, formData: any) => {
       return emailjs.send(serviceID, templateID, formData, this.publicKey);
     }
   };
 
-  private emailjsPrivate = {
-    send: (serviceID: string, templateID: string, formData: any) => {
-      return emailjs.send(serviceID, templateID, formData, this.publicKeyPrivate);
-    }
-  };
 
-  private conversionLabels: { [key: string]: string } = {
+
+  private conversionLabels: { [key: string]: string } = { // Esto es para Mappear los send de los formularios como conversiones de googleADS
     Spanish: 'AW-16893663663/GAgHCMSEo6gaEK-zw_c-',
     Coverage: 'AW-16893663663/cuHTCOmFo6gaEK-zw_c-',
     Referral: 'AW-16893663663/okq5CMaDpagaEK-zw_c-'
@@ -68,7 +60,6 @@ export class ContactFormComponent implements OnInit {
       };
 
       this.sendEmail(formData);
-      this.sendPrivateEmail(formData);
       this.trackConversion();
       
       this.formSubmitted = true;
@@ -87,24 +78,7 @@ export class ContactFormComponent implements OnInit {
       });
   }
 
-  private sendPrivateEmail(formData: any) {
-    const privateData = {
-      name: formData.name,
-      phone: formData.phone,
-      type_lead: this.type_lead,
-      email: formData.email,
-      question: formData.question,
-      to_email: 'info@laseniorservices.com'
-    };
 
-    this.emailjsPrivate.send(this.serviceIDPrivate, this.emailTemplatePrivate, privateData)
-      .then(response => {
-        console.log('Correo privado enviado con éxito:', response);
-      })
-      .catch(error => {
-        console.error('Error al enviar el correo privado:', error);
-      });
-  }
 
   private trackConversion() {
     if (isPlatformBrowser(this.platformId) && typeof (window as any).gtag === 'function') {
